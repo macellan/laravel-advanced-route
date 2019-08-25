@@ -13,7 +13,7 @@ class AdvancedRoute {
     private static $httpMethods = ['any', 'get', 'post', 'put', 'patch', 'delete'];
     private static $methodNameAtStartOfStringPattern = null;
 
-    public static function controller($path, $controllerClassName) {
+    public static function controller($path, $controllerClassName, $routeNames) {
         if( class_exists($controllerClassName) ) {
             $class = new ReflectionClass($controllerClassName);
         } else {
@@ -70,7 +70,17 @@ class AdvancedRoute {
             $httpMethod = null;
             foreach (self::$httpMethods as $httpMethod) {
                 if (self::stringStartsWith($methodName, $httpMethod)) {
-                    Route::$httpMethod($slug_path, $controllerClassName . '@' . $methodName);
+                    $routeName = null;
+                    if (array_key_exists($methodName, $routeNames)) {
+                        $routeName = $routeNames[$methodName];
+                    } else {
+                        continue;
+                    }
+
+                    Route::$httpMethod($slug_path, [
+                        'as'   => $routeName,
+                        'uses' => $controllerClassName . '@' . $methodName
+                    ]);
 
                     $route = new \stdClass();
                     $route->httpMethod = $httpMethod;
