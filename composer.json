@@ -1,9 +1,9 @@
 {
-    "name": "mertyildiran/laravel-advanced-route",
+    "name": "macellan/laravel-advanced-route",
     "description": "Advanced route class for Laravel - restoring implicit controllers to the framework.",
     "type": "library",
-    "keywords": ["route", "advanced", "laravel", "php", "lesichkov"],
-    "homepage": "http://github.com/lesichkovm/laravel-advanced-route",
+    "keywords": ["route", "advanced", "laravel", "php", "lesichkov", "macellan"],
+    "homepage": "http://github.com/macellan/laravel-advanced-route",
     "license": "proprietary",
     "authors": [
         {
