@@ -1,5 +1,5 @@
 # Laravel Advanced Route
-An advanced route for Laravel 5.3, 5.4, 5.5 and 5.6 to support controllers
+An advanced route for Laravel 5.3, 5.4, 5.5, 5.6, 5.8, 6.0 to support controllers
 
 ## Background ##
 In Laravel 5.3 the advanced functionality Route::controller was removed.
@@ -58,7 +58,9 @@ class UserController extends Controller {
 
 ### a) via composer (recommended) ###
 
+```
 composer require lesichkovm/laravel-advanced-route
+```
 
 ### b) manually ###
 
