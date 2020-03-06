@@ -74,16 +74,16 @@ class AdvancedRoute {
                         Route::$httpMethod($slug_path, $controllerClassName . '@' . $methodName);
                     } else {
                         $routeName = null;
+                        $params = [
+                            'uses' => $controllerClassName . '@' . $methodName
+                        ];
+
                         if (array_key_exists($methodName, $routeNames)) {
                             $routeName = $routeNames[$methodName];
-                        } else {
-                            continue;
+                            $params['as'] = $routeName;
                         }
 
-                        Route::$httpMethod($slug_path, [
-                            'as'   => $routeName,
-                            'uses' => $controllerClassName . '@' . $methodName
-                        ]);
+                        Route::$httpMethod($slug_path, $params);
                     }
 
                     $route = new \stdClass();
