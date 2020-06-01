@@ -62,7 +62,7 @@ class UserController extends Controller {
 ### a) via composer (recommended)
 
 ```console
-composer require lesichkovm/laravel-advanced-route
+composer require macellan/laravel-advanced-route
 ```
 
 ### b) manually
@@ -73,11 +73,11 @@ Add the following to your composer file:
    "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/lesichkovm/laravel-advanced-route.git"
+            "url": "https://github.com/macellan/laravel-advanced-route.git"
         }
     ],
     "require": {
-        "lesichkovm/laravel-advanced-route": "dev-master"
+        "macellan/laravel-advanced-route": "dev-master"
     },
 ```
 
@@ -126,7 +126,7 @@ class WikiController extends Controller
 
 ## Acknowledgements
 
-Laravel Advanced Route is only possible thanks to all the awesome [contributors](https://github.com/lesichkovm/laravel-advanced-route/graphs/contributors)!
+Laravel Advanced Route is only possible thanks to all the awesome [contributors](https://github.com/macellan/laravel-advanced-route/graphs/contributors)!
 
 ## Alternatives
 
