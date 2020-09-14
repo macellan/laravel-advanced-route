@@ -1,6 +1,6 @@
 # Laravel Advanced Route
 
-An advanced route for Laravel 5.3, 5.4, 5.5, 5.6, 5.8, 6.0, 7.0 to support controllers
+An advanced route for Laravel 5.3, 5.4, 5.5, 5.6, 5.8, 6.0, 7.0, 8.0 to support controllers
 
 ## Background
 
